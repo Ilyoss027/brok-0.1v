@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BROK 0.1v</title>
+  <link rel="stylesheet" href="statik\style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Brok brouser</h1>
+      <ul>
+        <!-- Qidiruv input -->
+<form method="GET" id="searchForm">
+  <input type="text" id="searchBox" name="q" placeholder="Nimani izlayapsiz?" autocomplete="on" />
+  <button type="submit">Qidirish</button>
+</form>
+
+<ul id="suggestions"></ul>
+
+<script>
+  const suggestions = document.getElementById("suggestions");
+  const searchBox = document.getElementById("searchBox");
+
+  searchBox.addEventListener("input", async () => {
+    const query = searchBox.value;
+    if (query.length < 1) {
+      suggestions.innerHTML = "";
+      return;
+    }
+
+    const res = await fetch(`/suggest?q=${query}`);
+    const data = await res.json();
+
+    suggestions.innerHTML = "";
+    data.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      li.onclick = () => {
+        searchBox.value = item;
+        document.getElementById("searchForm").submit();
+      };
+      suggestions.appendChild(li);
+    });
+  });
+</script>
+
+      </ul>
+    </form>
+    {% if results %}
+      <h2>Natijalar:</h2>
+      <ul>
+        {% for item in results %}
+          <li>
+            <a href="{{ item.url }}">{{ item.title }}</a>
+            <p>{{ item.desc }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+<footer>
+   Ushbu server ishmurodov ilyos tomonidan yaratilgan.
+</footer>
+</body>
+</html>

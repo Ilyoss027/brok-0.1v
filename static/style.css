@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    background: #f2f2f2;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  input {
+    padding: 10px;
+    width: 300px;
+    font-size: 18px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+
+  }
+  
+  ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 0;
+
+  }
+  
+  li {
+    background: white;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 600px;
+    border-radius: 8px;
+  }
+  
+  #suggestions {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  #suggestions li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #suggestions li:hover {
+    background: #eee;
+  }
+  
