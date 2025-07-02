@@ -66,5 +66,6 @@
   {"title": "Airbnb", "url": "https://airbnb.com", "desc": "Uy ijarasi xizmati"},
   {"title": "OLX", "url": "https://olx.uz", "desc": "Online e'lonlar sayti"},
   {"title": "aslimedia", "url":"https://asilmedia.org", "desc": "eng so'ng'gi uzbekcha kino va seryal, multfilm, o'yinlar to'plami sayti."},
-  {"title": "bitcoin", "url":"https://freebitco.in/", "desc": "Bitcoin kriptavalyuta."}
+  {"title": "bitcoin", "url":"https://freebitco.in/", "desc": "Bitcoin kriptavalyuta."},
+  {"title": "stadion.uz", "url":{"title": https://stadion.uz/", "desc": "fudboldagi eng so'nggi yangiliklar."}
 ]
